@@ -30,12 +30,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const prompt = `User goal: ${goal}\n\nHere are some vitamin products:\n${selected.map(p => `- ${p.name}`).join('\n')}\n\nBased on the goal, advise which product(s) would be suitable and why.`;
 
   try {
-    const completion = await openai.createChatCompletion({
+    const completion = await openai.chat.completions.create({
       model: 'gpt-4',
       messages: [{ role: 'user', content: prompt }],
     });
 
-    const answer = completion.data.choices[0].message?.content ?? '';
+    const answer = completion.choices[0].message?.content ?? '';
     res.status(200).json({ products: selected, answer });
   } catch (error: any) {
     console.error(error);
