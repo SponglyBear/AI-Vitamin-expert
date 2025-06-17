@@ -18,3 +18,11 @@ Run it with:
 ```bash
 npm run parseFeed
 ```
+
+## Deployment on Vercel
+
+1. Create a new project on [Vercel](https://vercel.com/) and import this repository.
+2. In the project settings, add an environment variable named `OPENAI_API_KEY` with your OpenAI key.
+3. Trigger a new deployment. Vercel will automatically install dependencies and run `npm run build`.
+
+After deployment finishes you can access the app using the provided Vercel URL.
