@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "1",
+    "name": "Vitamin C 1000mg",
+    "url": "https://example.com/vitamin-c",
+    "price": "10.99",
+    "description": "High potency vitamin C to support immunity."
+  },
+  {
+    "id": "2",
+    "name": "Vitamin D3 2000 IU",
+    "url": "https://example.com/vitamin-d3",
+    "price": "8.50",
+    "description": "Vitamin D3 to maintain healthy bones and immune system."
+  },
+  {
+    "id": "3",
+    "name": "Multivitamin Complex",
+    "url": "https://example.com/multivitamin",
+    "price": "15.00",
+    "description": "Comprehensive daily multivitamin formula."
+  }
+]

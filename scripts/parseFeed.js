@@ -10,8 +10,8 @@ async function run() {
 
   const items = parsed?.SHOP?.SHOPITEM ?? [];
   const vitamins = items
-    .filter((item: any) => /vitamin/i.test(item?.CATEGORY?.[0] || '') || /vitamin/i.test(item?.PRODUCTNAME?.[0] || ''))
-    .map((item: any) => ({
+    .filter((item) => /vitamin/i.test(item?.CATEGORY?.[0] || '') || /vitamin/i.test(item?.PRODUCTNAME?.[0] || ''))
+    .map((item) => ({
       id: item?.ITEM_ID?.[0],
       name: item?.PRODUCTNAME?.[0],
       url: item?.URL?.[0],
@@ -24,7 +24,7 @@ async function run() {
   console.log(`Saved ${vitamins.length} vitamins to ${outPath}`);
 }
 
-run().catch(err => {
+run().catch((err) => {
   console.error(err);
   process.exit(1);
 });

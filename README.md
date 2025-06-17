@@ -13,11 +13,12 @@ Simple Next.js application that recommends vitamin products using OpenAI.
 
 ## Parsing product feed
 
-The script `scripts/parseFeed.ts` downloads the GymBeam product feed, filters vitamin related items and stores them into `public/vitamins.json`.
+The script `scripts/parseFeed.js` downloads the GymBeam product feed, filters vitamin related items and stores them into `public/vitamins.json`.
 Run it with:
 ```bash
-npm run parseFeed
+npm run parse:feed
 ```
+If network access is restricted, you can modify `public/vitamins.json` manually.
 
 ## Deployment on Vercel
 
